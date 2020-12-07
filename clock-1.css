@@ -1,0 +1,335 @@
+* {
+    box-sizing: border-box;
+}
+
+@font-face {
+    font-family: "saira-condedsed";
+    src: url(./Saira_Condensed/SairaCondensed-Regular.ttf);
+}
+
+@font-face {
+    font-family: "goldman";
+    src: url(Goldman-Regular.ttf);
+}
+
+/* @keyframes slide {
+    to {opacity: 0;}
+
+} */
+
+.digital-clock {
+    margin-top: 30vh;
+}
+.back-image {
+    width: 100%;
+    height: 100vh;
+    object-fit: cover;
+    position: absolute;
+    top: 0;
+    right: 0;
+    z-index: -10;
+    filter: brightness(40%);
+}
+/* Styling for time container */
+.time-container {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    transform: scale(1);
+}
+
+/* Styling for Seconds-container */
+.container-second-1::first-letter {
+    position: absolute;
+    font-size: 3em;
+    color: #ffffff; 
+    font-family: "goldman";
+
+}
+
+.container-second-2::first-letter {
+    position: absolute;
+    font-size: 3em;
+    color: #ffffff; 
+    font-family: "goldman";
+}
+
+/* styling for container 1 & 2 */
+
+.container-second-1 {
+    text-align: center;
+    width: 2.5em;
+    height: auto;
+    overflow: hidden;
+    margin-right: 3px;
+    background-color: #ffffff00;
+    border: 0px solid #ccc;
+    border-radius: 5px;
+    box-shadow: 0px 0px 2px 1px rgba(0, 0, 0, 0.3);
+    
+
+}
+.container-second-2 {
+    text-align: center;
+    width: 2.5em;
+    height: auto;
+    overflow: hidden;
+    background-color: #ffffff00;
+    border: 0px solid #ccc;
+    border-radius: 5px;
+    box-shadow: 0px 0px 2px 1px rgba(0, 0, 0, 0.3);
+}
+
+/* Styling for hour-container */
+/* .container-hour-1::first-letter {
+    position: absolute;
+    font-size: 3em;
+    color: rgb(0, 0, 0); 
+    font-family: "goldman";
+
+}
+
+.container-hour-2::first-letter {
+    position: absolute;
+    font-size: 3em;
+    color: rgb(0, 0, 0); 
+    font-family: "goldman";
+
+} */
+
+/* styling for container 1 & 2 */
+
+.container-hours-1 {
+    text-align: center;
+    width: 2.5em;
+    height: auto;
+    overflow: hidden;
+    margin-right: 3px;
+    background-color: #ffffff00;
+    border: 0px solid rgba(204, 204, 204, 0);
+    border-radius: 5px;
+    box-shadow: 0px 0px 2px 1px rgba(0, 0, 0, 0.3);
+    
+
+}
+.container-hours-2 {
+    text-align: center;
+    width: 2.5em;
+    height: auto;
+    overflow: hidden;
+    background-color: #ffffff00;
+    border: 0px solid #ccc;
+    border-radius: 5px;
+    box-shadow: 0px 0px 2px 1px rgba(0, 0, 0, 0.3);
+  
+}
+
+.container-hours-1::first-letter {
+    position: absolute;
+    font-size: 3em;
+    color: #ffffff; 
+    font-family: "goldman";
+
+}
+
+.container-hours-2::first-letter {
+    position: absolute;
+    font-size: 3em;
+    color: #ffffff; 
+    font-family: "goldman";
+}
+
+/* Styling for Minutes-Container */
+.container-minutes-1 {
+    text-align: center;
+    width: 2.5em;
+    height: auto;
+    overflow: hidden;
+    margin-right: 3px;
+    background-color: #ffffff00;
+    border: 0px solid #ccc;
+    border-radius: 5px;
+    box-shadow: 0px 0px 2px 1px rgba(0, 0, 0, 0.3);
+
+}
+.container-minutes-2 {
+    text-align: center;
+    width: 2.5em;
+    height: auto;
+    overflow: hidden;
+    background-color: #ffffff00;
+    border: 0px solid #ccc;
+    border-radius: 5px;
+    box-shadow: 0px 0px 2px 1px rgba(0, 0, 0, 0.3);
+}
+.container-minutes-1::first-letter {
+    position: absolute;
+    font-size: 3em;
+    color: #ffffff; 
+    font-family: "goldman";
+
+}
+
+.container-minutes-2::first-letter {
+    position: absolute;
+    font-size: 3em;
+    color: #ffffff; 
+    font-family: "goldman";
+}
+
+.container-seconds, .container-minutes, .container-hours {
+    width: 5em;
+    /* width: 15em;
+    height: 20em; */
+    background-color: #ffc5c500; 
+    display: flex;
+    border: 0px transparent #999999;
+    justify-content: center;
+    position: relative;
+    align-items: center; 
+    
+    /* box-shadow: 0px 0px 4px 2px rgba(0, 0, 0, 0.5); */
+}
+/* .container-hours {
+    background: transparent;
+    border-radius: 5px;
+    box-shadow: 0px 0px 4px 2px rgba(0, 0, 0, 0.5);
+} */
+
+/* Styling for time seperator */
+.time-seperator {
+    position: relative;
+    width: 20px;
+    height: 61px;
+    background: #ddb6b600;
+    display: flex;
+    justify-content: center;
+
+}
+.colontop {
+    position: absolute;
+    width: 5px;
+    height: 5px;
+    background: #ffffff;
+    margin-top: 20px;
+    border-radius: 0px;
+    box-shadow: 0px 0px 2px 0px rgba(0, 0, 0, 0.3);
+
+}
+.colonbottom {
+    position: absolute;
+    width: 5px;
+    height: 5px;
+    background: #ffffff;
+    bottom: 0px;
+    margin-bottom: 20px;
+    border-radius: 0px;
+    box-shadow: 0px 0px 2px 0px rgba(0, 0, 0, 0.3);
+
+}
+
+/* Container AM-PM */
+.container-am-pm {
+    margin-top: 10px;
+    margin-right: auto;
+    margin-left: auto;
+    width: 5em;
+    display: flex;
+    justify-content: center;
+    background: #e27c7c00;
+    overflow: visible;
+}
+
+.container-a-p {
+    margin-right: 2px;
+    border: 0px solid black;
+    width: 2em;
+    font-size: 2em;
+    font-family: "goldman";
+    background: rgba(255, 255, 255, 0);
+    color: #ecdb09;
+    text-align: center;
+    border-radius: 5px;
+    box-shadow: 0px 0px 2px 1px rgba(0, 0, 0, 0.3);
+    /* padding: 4px 4px; */
+}
+.container-m {
+    border: 0px solid black;
+    width: 2em;
+    font-size: 2em;
+    font-family: "goldman";
+    background: rgba(255, 255, 255, 0);
+    color: #ecdb09;
+    text-align: center;
+    border-radius: 5px;
+    box-shadow: 0px 0px 2px 1px rgba(0, 0, 0, 0.3);
+}
+
+/* container for day, month, date and year */
+.container-day {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    margin-top: 30px;
+}
+.day {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    color: #ffffff;
+    font-family: "goldman";
+    font-size: 1.5em;
+    margin-bottom: 15px;
+}
+.day::after {
+    content: "";
+    position: absolute;
+    width: 150px;
+    background-image: radial-gradient(circle, #000000 10%, transparent 100%);
+    height: 1px;
+    bottom: -8px;   
+}
+.date-month {
+    display: flex;
+    position: relative;
+    justify-content: center;
+    margin-bottom: 15px;
+}
+.date-month::after {
+    content: "";
+    position: absolute;
+    width: 150px;
+    background-image: radial-gradient(circle, #000000 10%, transparent 100%);
+    height: 1px; 
+    bottom: -10px; 
+}
+.month {
+    font-size: 2em;
+    font-family: "goldman";
+    margin-right: 12px;
+    color: #ecdb09;
+}
+.date {
+    font-size: 2em;
+    font-family: "goldman";
+    color: #ffffff;
+    /* margin-right: 14px; */
+   
+}
+.date-upper {
+    font-weight: lighter; 
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 12px;
+    margin-left: -14px;
+    margin-right: 12px;
+}
+
+.year {
+    position: relative;
+    text-align: center;
+    font-size: 1.5em;
+    font-family: "goldman";
+    color: #ffffff;
+}
